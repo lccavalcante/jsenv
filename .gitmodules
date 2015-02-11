@@ -1,0 +1,12 @@
+[submodule ".themes/CleanPress"]
+	path = .themes/CleanPress
+	url = https://github.com/macjasp/cleanpress
+[submodule ".themes/object-octopress-theme"]
+	path = .themes/object-octopress-theme
+	url = https://github.com/gluttony/object-octopress-theme
+[submodule ".themes/YinYang"]
+	path = .themes/YinYang
+	url = https://github.com/qingwang/octopress-theme-yinyang
+[submodule ".themes/villainy"]
+	path = .themes/villainy
+	url = https://github.com/mikeclarke/villainy-octopress-theme
