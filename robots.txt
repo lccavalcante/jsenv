@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://gmoura.github.io/jsenv/sitemap.xml 
