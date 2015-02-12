@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://gmoura.github.io/jsenv/blog/2012/07/22/the-problem-with-pingdom/</loc>
+    <loc>http://www.jsenv.com//blog/2012/07/22/the-problem-with-pingdom/</loc>
     <lastmod>2012-07-22T19:13:00-03:00</lastmod>
   </url>
   <url>
-    <loc>http://gmoura.github.io/jsenv/blog/2012/07/22/intro/</loc>
+    <loc>http://www.jsenv.com//blog/2012/07/22/intro/</loc>
     <lastmod>2012-07-22T08:23:00-03:00</lastmod>
   </url>
   <url>
-    <loc>http://gmoura.github.io/jsenv/archives/</loc>
-    <lastmod>2015-02-12T12:02:14-02:00</lastmod>
+    <loc>http://www.jsenv.com//archives/</loc>
+    <lastmod>2015-02-12T15:36:38-02:00</lastmod>
   </url>
   <url>
-    <loc>http://gmoura.github.io/jsenv/blog/</loc>
-    <lastmod>2015-02-12T12:02:14-02:00</lastmod>
+    <loc>http://www.jsenv.com//blog/</loc>
+    <lastmod>2015-02-12T15:36:38-02:00</lastmod>
   </url>
   <url>
-    <loc>http://gmoura.github.io/jsenv/</loc>
-    <lastmod>2015-02-12T12:02:14-02:00</lastmod>
+    <loc>http://www.jsenv.com//</loc>
+    <lastmod>2015-02-12T15:36:38-02:00</lastmod>
   </url>
   <url>
-    <loc>http://gmoura.github.io/jsenv/blog/archives/</loc>
-    <lastmod>2015-02-12T12:02:14-02:00</lastmod>
+    <loc>http://www.jsenv.com//blog/archives/</loc>
+    <lastmod>2015-02-12T15:36:38-02:00</lastmod>
   </url>
   <url>
-    <loc>http://gmoura.github.io/jsenv/about/</loc>
-    <lastmod>2015-02-12T12:02:14-02:00</lastmod>
+    <loc>http://www.jsenv.com//about/</loc>
+    <lastmod>2015-02-12T15:36:38-02:00</lastmod>
   </url>
 </urlset>

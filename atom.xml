@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://gmoura.github.io/jsenv/atom.xml" rel="self"/>
-  <link href="http://gmoura.github.io/jsenv/"/>
-  <updated>2015-02-12T12:02:14-02:00</updated>
-  <id>http://gmoura.github.io/jsenv/</id>
+  <title><![CDATA[JS[env]]]></title>
+  <link href="http://www.jsenv.com//atom.xml" rel="self"/>
+  <link href="http://www.jsenv.com//"/>
+  <updated>2015-02-12T15:36:38-02:00</updated>
+  <id>http://www.jsenv.com//</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[jsman]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[The problem with Pingdom]]></title>
-    <link href="http://gmoura.github.io/jsenv/blog/2012/07/22/the-problem-with-pingdom/"/>
+    <link href="http://www.jsenv.com//blog/2012/07/22/the-problem-with-pingdom/"/>
     <updated>2012-07-22T19:13:00-03:00</updated>
-    <id>http://gmoura.github.io/jsenv/blog/2012/07/22/the-problem-with-pingdom</id>
+    <id>http://www.jsenv.com//blog/2012/07/22/the-problem-with-pingdom</id>
     <content type="html"><![CDATA[<figure class='code'><figcaption><span>Time to be Awesome - awesome.rb </span></figcaption>
 <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="nb">puts</span> <span class="s2">&quot;Awesome!&quot;</span> <span class="k">unless</span> <span class="n">lame</span>
@@ -45,9 +45,9 @@ bullshit?</p></blockquote>
   
   <entry>
     <title type="html"><![CDATA[Intro]]></title>
-    <link href="http://gmoura.github.io/jsenv/blog/2012/07/22/intro/"/>
+    <link href="http://www.jsenv.com//blog/2012/07/22/intro/"/>
     <updated>2012-07-22T08:23:00-03:00</updated>
-    <id>http://gmoura.github.io/jsenv/blog/2012/07/22/intro</id>
+    <id>http://www.jsenv.com//blog/2012/07/22/intro</id>
     <content type="html"><![CDATA[<p>Testing!</p>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin, massa eu vestibulum laoreet, nibh ante vulputate lorem, ac lobortis ante tellus eu mi. Duis sem nisi, luctus at feugiat eget, fringilla ut tellus. Nam a molestie justo. Sed pulvinar est vitae tellus semper tincidunt. Fusce euismod luctus lacus nec placerat. Mauris rutrum scelerisque nulla ut tempor. Nunc porttitor posuere mi, aliquet vehicula lorem feugiat in. Ut ut fermentum risus. Aliquam tincidunt ultricies ante sit amet bibendum. Cras nec sapien odio. Duis posuere congue sem, at congue massa faucibus at.</p>
