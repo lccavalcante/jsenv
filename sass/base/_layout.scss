@@ -88,7 +88,7 @@ ul#menu li.title {
 }
 
 ul#menu li.subtitle {
-  margin-top: 0;
+  margin-top: 20px;
 }
 
 header#sidebar h1#title {
@@ -122,19 +122,8 @@ header#sidebar h1#title {
   z-index: 9999;
 }
 
-header#sidebar h1#title a {
-  font-family: sans-serif;
-  font-weight: 900;
-  font-size: 30px;
-  line-height: 30px;
-  border: none;
-  padding: 0;
-  display: block;
-  color: black;
-  margin-left: 0;
-}
 
-header#sidebar h2#subtitle {
+header#sidebar h1#subtitle {
   font-weight: 300;
   font-size: 16px;
   line-height: 23px;
@@ -169,12 +158,8 @@ header#sidebar h2#subtitle {
     width: 65%;
   }
 
-  header#sidebar h1#title a {
-    font-size: 35px;
-    line-height: 35px;
-  }
 
-  header#sidebar h2#subtitle {
+  header#sidebar h1#subtitle {
     font-size: 20px;
     line-height: 25px;
   }
