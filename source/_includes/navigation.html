@@ -3,14 +3,14 @@
 	<ul class="dl-menu">
 		<li><a href="/">Home</a></li>
 		<li>
-			<a href="#">About</a>
+			<a href="#">Sobre</a>
 			<ul class="dl-submenu">
 				<li>
 					<img src="{{ site.avatar }}" alt="{{ site.author }} photo" class="author-photo">
 					<h4>{{ site.author }}</h4>
-					<p>{{ site.author_bio }}</p>
+					<p>{{ site.description }}</p>
 				</li>
-				{% if site.learn_more_link %}<li><a href="{{ site.learn_more_link }}">Learn More</a></li>{% endif %}
+				<li><a href="/sobre">Leia mais</a></li>
 				{% if site.email %}<li>
 					<a href="mailto:{{ site.email }}"><i class="fa fa-envelope"></i> Email</a>
 				</li>{% endif %}
@@ -28,8 +28,8 @@
 		<li>
 			<a href="#">Posts</a>
 			<ul class="dl-submenu">
-				<li><a href="/posts/">All Posts</a></li>
-				<li><a href="/categories/">All Categories</a></li>
+				<li><a href="/posts/">Posts</a></li>
+				<li><a href="/categories/">Categorias</a></li>
 			</ul>
 		</li>
 		{% for link in site.links %}<li>{% if link.external %}<a href="{{ link.url }}">{{ link.title }}</a>{% else %}<a href="{{ root_url }}{{ link.url }}">{{ link.title }}</a>{% endif %}</li>{% endfor %}
