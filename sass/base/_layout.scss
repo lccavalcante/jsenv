@@ -25,6 +25,18 @@ body {
 	}
 }
 
+// Logo sidebar
+// ----------------------------------------------------
+
+.logo-sidebar {
+	text-align: center;
+	
+	img {
+		width: 60px;
+		margin-top: 1em;	
+	}
+}
+
 // Single Post and Page
 // --------------------------------------------------
 .entry-meta {
@@ -169,6 +181,8 @@ body {
 	text-align: center;
 	color: lighten($text-color,20%);
 	a {
+		text-decoration: underline;
+		font-style: italic;
 		color: lighten($text-color,20%);
 	}
 }
