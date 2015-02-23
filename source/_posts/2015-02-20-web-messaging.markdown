@@ -4,7 +4,7 @@ author: Leandro Cavalcante
 title: "Web Messaging - API HTML 5"
 date: 2015-02-20 17:24:45 -0200
 comments: true
-categories: 
+categories: js, html5
 ---
 
 _Web Messaging_ ou _Cross-document Messaging_ é uma API introduzida nas especificações da HTML 5 que permite a comunicação entre documentos de origens diferentes.
