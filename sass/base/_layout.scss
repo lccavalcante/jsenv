@@ -1,327 +1,235 @@
-$min-width: 895px;
-$logo-height: 135px;
-$logo-width: 135px;
-$logo-radius: 10px;
-$logo-inner-height: 90px;
-$logo-inner-width: 90px;
-$logo-inner-radius: 50%;
-
 body {
-  min-width: $min-width;
-  font-size: 1em;
-  line-height: 1.4;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background-color: $body-color;
 }
 
-#sidebar {
-  width: 27%;
-  padding-left: 1.5%;
-  min-width: 240px;
-  position: fixed;
-  min-height: 100%;
-  z-index: 1;
+// Main
+// --------------------------------------------------
+.entry,
+.hentry {
+	@include clearfix();
+}
+.entry-content {
+	@include font-rem($p_fs);
+  @include line-height($p_lh);
+  @include margin-after;
+	// Dotted line underlines for links
+	p > a:not(.image-link),
+	li > a:not(.image-link) {
+		border-bottom: 1px dotted lighten($link-color, 50%);
+		&:hover {
+			border-bottom-style: solid;
+		}
+	}
 }
 
-aside#logo {
-  position: relative;
-  display: block;
-  width: $logo-width;
-  height: $logo-height;
-  border-radius: $logo-radius;
-  -moz-border-radius: $logo-radius;
-  -webkit-border-radius: $logo-radius;
-  margin-left: 30px;
-  margin-top: 40px;
+// Single Post and Page
+// --------------------------------------------------
+.entry-meta {
+	@include font-rem($footer_fs);
+	text-transform: uppercase;
+	color: lighten($base-color,60%);
+	a {
+		color: lighten($base-color,60%);
+	}
+	.vcard {
+		&:before {
+			content: " by ";
+		}
+	}
+	.tag {
+		display: inline-block;
+		margin: 4px;
+		padding: 2px 6px;
+		background-color: lighten($base-color,60%);
+		color: $white;
+		@include border-radius(3px);
+		color: $white;
+		span {
+			vertical-align: super;
+			@include font-rem($super_fs);
+		}
+		&:hover {
+			background-color: lighten($base-color,50%);
+		}
+		&:active {
+			@include translate(0, 1px);
+	        box-shadow: 0 0 1px rgba($base-color,0.20);
+		}
+	}
+}
+#post,
+#page {
+	.entry-content {
+		margin: 40px 2px 20px 2px;
+		padding: 10px 15px;
+		background-color: $white;
+		box-shadow: 0 0 0 0, 0 6px 12px rgba($black,0.10);
+		@include border-radius(3px);
+		@media #{$medium} {
+			margin-left: 10px;
+			margin-right: 10px;
+			padding: 20px 30px;
+		}
+		@media #{$large} {
+			max-width: 800px;
+			margin: 50px auto 30px auto;
+			padding: 50px 80px;
+			> p:first-child {
+				@include font-rem($p1_fs);
+				@include line-height($p1_lh);
+        @include margin-after
+			}
+		}
+	}
+	#disqus_thread {
+		margin: 40px 2px 20px 2px;
+		padding: 10px 15px;
+		background-color: $white;
+		box-shadow: 0 0 0 1px rgba($border-color,0.10), 0 6px 12px rgba($black,0.10);
+		@include border-radius(3px);
+		@media #{$medium} {
+			margin-left: 10px;
+			margin-right: 10px;
+			padding: 20px 30px;
+		}
+		@media #{$large} {
+			max-width: 800px;
+			padding: 50px 80px;
+			margin: 0 auto 30px auto;
+		}
+	}
+	.entry-meta {
+		margin: 50px 30px 30px;
+		text-align: center;
+	}
+}
+.entry-tags {
+	display: block;
+	margin-bottom: 6px;
+}
+// Post Pagination Module
+.pagination {
+	margin: 20px 10px;
+	text-align: center;
+	ul {
+		display: inline;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	li {
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+	.current-page {
+		font-weight: 700;
+	}
 }
 
-aside#logo div {
-  border-radius: $logo-inner-radius;
-  -moz-border-radius: $logo-inner-radius;
-  -webkit-border-radius: $logo-inner-radius;
-  width: $logo-inner-width;
-  height: $logo-inner-height;
-  text-indent: -9999px;
-  margin: 0 auto;
-  margin-top: 10px;
-  clear: both;
+
+// Post Index 
+// --------------------------------------------------
+#post-index {
+	#main {
+		margin: 40px 2px 20px 2px;
+		@media #{$medium} {
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		@media #{$large} {
+			max-width: 800px;
+			margin-top: 50px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+	article {
+		background-color: $white;
+		box-shadow: 0 0 0 0, 0 6px 12px rgba($base-color,0.10);
+		@include border-radius(3px);
+		margin-bottom: 20px;
+		padding: 25px 15px;
+		@media #{$medium} {
+			padding: 30px;
+		}
+		@media #{$large} {
+			margin-bottom: 30px;
+			padding: 50px 80px;
+		}
+	}
 }
 
-aside#logo div a {
-  display: block;
-  clear: both;
-  width: 78px;
-  height: 78px;
-  margin: 0 auto;
-  margin-top: 6px;
+// Footer
+// --------------------------------------------------
+.footer-wrapper {
+	@include clearfix();
+	margin: 2em auto;
+	text-align: center;
+	color: lighten($text-color,20%);
+	a {
+		color: lighten($text-color,20%);
+	}
 }
 
-ul#menu {
-  clear: both;
-  margin: 0;
-  padding: 0;
-  margin-left: 30px;
-  width: 75%;
+// Category
+// --------------------------------------------------
+.category h2,
+.archive-year h2 {
+  text-align: right;
 }
 
-ul#menu li {
-  display: block;
-  clear: both;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 15px;
-}
-
-ul#menu a {
-  display: inline-block;
-  font-size: 15px;
-  line-height: 14px;
-  z-index: 999;
-  padding: 7px;
-  padding-left: 33px;
-  padding-right: 12px;
-  margin-left: -15px;
-  font-weight: 600;
-  position: relative;
-}
-
-ul#menu li.title {
-  margin-bottom: 0;
-}
-
-ul#menu li.subtitle {
-  margin-top: 20px;
-}
-
-header#sidebar h1#title {
-  font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 15px;
-}
-
-#octopress_linkback {
-  position: fixed;
-  left: 30px;
-  bottom: 30px;
-  font-size: 15px;
-  letter-spacing: 0;
-  text-transform: uppercase;
-  font-family: "Rokkitt",serif;
-  font-weight: 900;
-  line-height: 15px;
-  padding: 10px;
-  height: 30px;
-  z-index: 9999;
-  border-radius: 5px;
-}
-
-#main {
-  border-left: 1px solid #e3e3e3;
-  margin-left: 27%;
-  min-height: 900px;
-  min-width: 658px;
-  position: relative;
-  z-index: 9999;
+// Social Share
+// --------------------------------------------------
+.socialcount {
+	@include font-rem($socialcount_fs);
+	font-weight: 700;
+	li { 
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	p > a,
+	li > a {
+		border-bottom-width: 0;
+	}
 }
 
 
-header#sidebar h1#subtitle {
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 23px;
-  color: #585C60;
-  -webkit-font-smoothing: antialiased;
-  max-width: none;
-  margin-top: 5px;
-  margin-bottom: 25px;
+// Browser Upgrade
+// --------------------------------------------------
+.upgrade {
+	padding: 10px;
+	text-align: center;
 }
 
-// Large screen
-@media only screen and (min-width: 1300px) {
-  #sidebar {
-    margin-left: 0;
-    padding-left: 2%;
-  }
-
-  aside#logo div {
-    width: 135px;
-    height: 135px;
-    margin-top: 15px;
-  }
-
-  aside#logo div a {
-    width: 117px;
-    height: 117px;
-    margin-top: 9px;
-  }
-
-  ul#menu {
-    max-width: 300px;
-    width: 65%;
-  }
-
-
-  header#sidebar h1#subtitle {
-    font-size: 20px;
-    line-height: 25px;
-  }
+// Google Search
+// --------------------------------------------------
+#goog-fixurl {
+	ul {
+		list-style: none;
+		margin-left: 0;
+		padding-left: 0;
+		li {
+			list-style-type: none;
+		}
+	}
 }
-
-// Short screen
-@media only screen and (max-height: 650px) {
-  #sidebar {
-    position: absolute;
-  }
-
-  #octopress_linkback {
-    top: 700px;
-    position: absolute;
-  }
+#goog-wm-qt {
+	width: auto;
+	margin-right: 10px;
+	margin-bottom: 20px;
+	padding: 8px 20px;
+	display: inline-block;
+  // TODO Figure out where this id is applied and add sass font variable
+	@include font-rem(0.875);
+	background-color: $white;
+	color: $primary;
+	border-width: 2px !important;
+	border-style: solid !important;
+	border-color: lighten($primary,50%);
+	@include border-radius(3px);
 }
-
-// Medium-width screen
-@media only screen and (max-width: 630px),
-  (device-height: 1024px) and (device-width: 768px) and (orientation: portrait) {
-  body { min-width: 0; }
-
-  #sidebar {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-
-  aside#logo {
-    margin: 0 auto;
-    position: relative;
-    left: auto;
-    right: auto;
-    margin-top: 20px;
-    margin-bottom: 0;
-  }
-
-  ul#menu {
-    width: auto;
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
-  }
-
-  ul#menu li.link {
-    display: inline-block;
-    float: none;
-    width: auto;
-    clear: none;
-    margin: 0;
-    margin-bottom: 5px;
-  }
-
-  ul#menu li.rss {
-    display: none;
-  }
-
-  section#main {
-    margin: 0;
-    border: none;
-    width: 100%;
-    min-width: 0;
-    margin-top: 15px;
-    overflow: hidden;
-  }
-
-  section#main article {
-    width: auto;
-    padding-left: 0;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    overflow: hidden;
-  }
-
-  article p, article h2, article h1, article h3, article h4, article h5, article h6 {
-    padding-right: 10px;
-    padding-left: 15px;
-  }
-
-  section#main article h2 {
-    margin-top: 0;
-  }
-
-  article.post {
-    width: auto;
-    padding-left: 0;
-    padding-top: 30px;
-    padding-bottom: 15px;
-    overflow: hidden;
-  }
-
-  article.post figure {
-    padding-right: 10px;
-    padding-left: 15px;
-    width: 90%;
-  }
-
-  aside#octopress_linkback {
-    display: none;
-  }
-}
-
-// Articles
-article.post {
-  width: auto;
-  position: relative;
-  padding-left: 50px;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  border-top: 1px solid #E2E2E2;
-  min-height: 130px;
-}
-
-section.comments {
-  width: auto;
-  position: relative;
-  padding-left: 50px;
-  overflow-x: hidden;
-}
-
-article.post h2, article.post p {
-  max-width: 500px;
-}
-
-article.post figure {
-  max-width: 500px;
-}
-
-// Anchor
-h2.entry-title a.anchor {
-  font-size: 0.9em;
-  margin-left: 5px;
-  border-bottom: 0;
-}
-
-// Navigation
-nav#pagination {
-  padding: 40px;
-  border-top: 1px solid #E2E2E2;
-  padding-bottom: 100px;
-}
-
-nav#pagination span.next a, nav#pagination span.prev a {
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 30px;
-  -moz-border-radius: 30px;
-  -webkit-border-radius: 30px;
-  font-weight: 700;
-  text-transform: uppercase;
-  border: 3px solid;
-}
-
-nav#pagination span.prev {
-  display: block;
-  float: left;
-}
-
-nav#pagination span.next {
-  display: block;
-  float: right;
+#goog-wm-sb {
+	.btn{};
 }

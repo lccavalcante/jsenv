@@ -2,8 +2,8 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://www.jsenv.com jsenv.com/jsenv
-title: JS env 
+url: http://www.jsenv.com 
+title: JS env  
 subtitle: Ambiente dedicado a assuntos sobre JavaScript.
 author: Guilherme Moura Nascimento
 simple_search: https://www.google.com/search
@@ -16,20 +16,20 @@ description: Ambiente dedicado a assuntos sobre JavaScript
 date_format: "ordinal"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: /jsenv/atom.xml
+subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email:
+email: gmoura.nas@gmail.com
 
 # ----------------------- #
 #    Jekyll & Plugins     #
 # ----------------------- #
 
 # If publishing to a subdirectory as in http://site.com/project set 'root: /project'
-root: /jsenv
+root: /
 permalink: /blog/:year/:month/:day/:title/
 source: source
-destination: public/jsenv
+destination: public/
 plugins: plugins
 code_dir: downloads/code
 category_dir: blog/categories
@@ -64,17 +64,17 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 # ----------------------- #
 
 # Github repositories
-github_user:
+github_user: JS-ENV
 github_repo_count: 0
 github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
+twitter_user: ogmoura
 twitter_tweet_button: true
 
 # Google +1
-google_plus_one: false
+google_plus_one: true
 google_plus_one_size: medium
 
 # Google Plus Profile
@@ -91,11 +91,11 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
+disqus_short_name: ogmoura
 disqus_show_comment_count: false
 
 # Google Analytics
-google_analytics_tracking_id:
+google_analytics_tracking_id: UA-59955359-1
 
 # Facebook Like
-facebook_like: false
+facebook_like: true

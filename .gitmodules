@@ -10,3 +10,6 @@
 [submodule ".themes/villainy"]
 	path = .themes/villainy
 	url = https://github.com/mikeclarke/villainy-octopress-theme
+[submodule ".themes/HPSTR"]
+	path = .themes/HPSTR
+	url = https://github.com/jez/hpstr-theme/
