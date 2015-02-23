@@ -4,7 +4,7 @@ title: "Como sincronizar um fork com seu repositório original"
 date: 2015-02-23 15:06:17 -0300
 author: Leandro Cavalcante
 comments: true
-categories: 
+categories: Git
 ---
 
 Estamos acostumados a dar um fork em repositórios que contém scripts, aplicações e frameworks para utilizarmos no nosso dia-a-dia, facilitando a criação de nossas aplicações.
