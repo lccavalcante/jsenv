@@ -11,6 +11,8 @@ Estamos acostumados a dar um fork em repositórios que contém scripts, aplicaç
 
 Mas, e se o repositório original do qual fizemos o fork se atualizar? Como faremos para sincronizar nosso fork com o repositório original?
 
+<!-- more -->
+
 Vamos entender e resolver estas questões!
 
 ### Configurando um relacionamento entre seu fork e o repositório original

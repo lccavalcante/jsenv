@@ -9,8 +9,11 @@ categories:
 
 _Web Messaging_ ou _Cross-document Messaging_ é uma API introduzida nas especificações da HTML 5 que permite a comunicação entre documentos de origens diferentes.
 
+<!-- more -->
+
 Mensagens _cross-document_ permitem que os scritps possam interagir através destes limites, proporcionando um nível de segurança não muito desenvolvido. 
 Sendo assim, é essencial que o desenvolvedor cheque a origem da mensagem antes de efetuar qualquer manipulação.
+
 
 A tabela abaixo, esclarece forma simples como funciona a **_Política de Mesma Origem_**:
 
