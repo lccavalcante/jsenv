@@ -19,7 +19,7 @@ date_format: "ordinal"
 subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email: gmoura.nas@gmail.com
+email:
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -87,7 +87,7 @@ pinboard_user:
 pinboard_count: 3
 
 # Delicious
-delicious_user:
+delicious_user: jsenv
 delicious_count: 3
 
 # Disqus Comments
