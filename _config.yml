@@ -87,11 +87,11 @@ pinboard_user:
 pinboard_count: 3
 
 # Delicious
-delicious_user: jsenv
+delicious_user: 
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name: ogmoura
+disqus_short_name: jsenv
 disqus_show_comment_count: false
 
 # Google Analytics
