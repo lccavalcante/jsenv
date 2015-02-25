@@ -4,18 +4,18 @@ title: "Classes em Javascript"
 date: 2015-02-24 00:01:27 -0300
 author: Rodrigo Fernandes
 comments: true
-categories: javascript, prototipos, 
+categories: [javascript, prototipos] 
 image:
   feature: http://www.jsenv.com/post_images/0A7ED815C4.jpg
 ---
 	
-Quando comecei a desenvolver em JavaScript um dos primeiros conflitos que tive com a linguagem foi o famoso caso das classes, na faculdade eu havia aprendido os conceitos de orientação a objeto e aplicado esses conhecimentos somente nas linguagens Java e C#, de inicio foi difícil compreender esse mundo novo do JavaScript, afinal tanto em Java como em C# não se tem os protótipos, por este motivo quis escrever este post, para aqueles que estão iniciando possam  compreender melhor o funcionamento da linguagem , mas vamos por partes, para compreender classes em JavaScript primeiro é necessário compreender o que é protótipos.
+Quando comecei a desenvolver em JavaScript um dos primeiros conflitos que tive com a linguagem foi o famoso caso das classes, na faculdade eu havia aprendido os conceitos de orientação a objeto e aplicado esses conhecimentos somente nas linguagens Java e C#, de início foi difícil compreender esse mundo novo do JavaScript, afinal tanto em Java como em C# não se tem os protótipos, por este motivo quis escrever este post, para aqueles que estão iniciando possam  compreender melhor o funcionamento da linguagem , mas vamos por partes, para compreender classes em JavaScript primeiro é necessário compreender o que é protótipos.
 
 <!-- more -->
 
 ## Protótipos
 
-Todo objeto em JavaScript tem um segundo objeto, este segundo objeto é chamado de protótipo, e o primeiro sempre herda as propriedades deste protótipo, todos os objetos criados com a palavra-chave new utiliza a função construtora como protótipo, o código por exemplo abaixo.
+Todo objeto em JavaScript tem um segundo objeto, este segundo objeto é chamado de protótipo, e o primeiro sempre herda as propriedades deste protótipo. Todos os objetos criados com a palavra-chave `new` utilizam a função construtora como protótipo, exemplo:
 
 ``` javascript criando objeto
 //criando objeto e herdando de Date.prototype
@@ -24,13 +24,13 @@ var data = new Date();
 data.getDate();
 ```
 
-O objeto data herda as propriedades de Date.prototype e de Object.prototype, essa serie de encadeamento nos chamamos de encandeamento de protótipos.
+O objeto data herda as propriedades de `Date.prototype` e de `Object.prototype`, essa série de encadeamento nos chamamos de encandeamento de protótipos.
 
 ## Criando classes em JavaScript
 
-A maneira como se é criada classes em JavaScript é diferente da maneira como é feita em Java, as classes em JavaScript são baseadas em cima do mecanismo de  protótipos, primeiro é necessário criar uma função que se tem o nome de construtora, através dela  é possível se realiza a herança de propriedades para o objeto que vai herdar, segue o codigo abaixo tanto em JavaScript como em Java para que você possa comparar as diferenças.
+A maneira como se é criada classes em JavaScript é diferente da maneira como é feita em Java, as classes em JavaScript são baseadas em cima do mecanismo de  protótipos, primeiro é necessário criar uma função que se tem o nome de construtora e através dela  é possível se realizar a herança de propriedades para o objeto que vai herdar, segue o código abaixo tanto em JavaScript como em Java para que você possa comparar as diferenças.
 
-``` java classe pessoa
+``` java exemplo classe pessoa java
 //classe em Java
 public class Pessoa {
 	//atributos	
@@ -59,7 +59,7 @@ public class Pessoa {
 }
 ```
 
-``` javascript classe pessoa
+``` javascript exemplo classe pessoa javascript
 //funçao construtora
 function Pessoa (nome, idade){
 	this.nome = nome;
@@ -76,9 +76,9 @@ Pessoa.prototype = {
 }
 ```
 
-A maneira como lidamos como instanciamos e utilizamos os métodos em JavaScript são os mesmo de linguagens como Java.
+A maneira como lidamos, como instanciamos e utilizamos os métodos em JavaScript são os mesmos de linguagem Java.
 
-``` javascript criando objeto
+``` javascript exemplo criando objeto em javascript
 //criando objeto em JavaScript
 var meuObjeto = new Pessoa('Rodrigo', 30);
 //invocando os metodos

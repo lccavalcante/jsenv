@@ -11,7 +11,7 @@ categories: javascript
 
 Javascript em alguns momentos é uma linguagem muito traiçoeira, prega peças que consomem horas de debug e paciência. São os chamados [Gotchas](http://en.wikipedia.org/wiki/Gotcha_%28programming%29), na tradução literal, _"pegadinhas"_. 
 
-Coisas que pela lógica deveriam funcionar de uma maneira, mais por características de um sistema ou alguma linguagem programação funcionam de maneira inesperada.
+Coisas que pela lógica deveriam funcionar de uma maneira, mas por características de um sistema ou alguma linguagem programação funcionam de maneira inesperada.
 <!-- more -->
 
 Esse post se dedica a tratar de um Gotcha muito comum relacionado a  escopo, que provavelmente você já foi pego por ele, caso não, é hora de explodir sua cabeça.
@@ -83,9 +83,9 @@ $.ajax({
     });
 })(i)// Índice do looping sendo passado como parâmetro
 ```
-O Javascript possui varios gotchas. [Jonathan Cardy](http://www.codeproject.com/Articles/182416/A-Collection-of-JavaScript-Gotchas) escreveu um post bem completo, sobre vários gotchas do Javascript, vale uma lida.
+O Javascript possui vários gotchas. [Jonathan Cardy](http://www.codeproject.com/Articles/182416/A-Collection-of-JavaScript-Gotchas) escreveu um post bem completo, sobre vários gotchas do Javascript, vale uma lida.
 
-Já com relação a closures, existe um post no [stackoverflow](http://stackoverflow.com/questions/111102/how-do-javascript-closures-work) detalhando a fundo sobre o assunto.
+Já com relação a closures, existe um post no [stackoverflow](http://stackoverflow.com/questions/111102/how-do-javascript-closures-work) detalhando sobre o assunto.
 
 
 

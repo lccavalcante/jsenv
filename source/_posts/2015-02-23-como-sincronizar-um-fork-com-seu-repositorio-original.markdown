@@ -6,7 +6,7 @@ author: Leandro Cavalcante
 comments: true
 image:
   feature: http://www.jsenv.com/post_images/OAIDO9GSRD.jpg
-categories: Git
+categories: git
 ---
 
 Estamos acostumados a dar um fork em repositórios que contém scripts, aplicações e frameworks para utilizarmos no nosso dia-a-dia, facilitando a criação de nossas aplicações.
