@@ -13,7 +13,7 @@ Quando comecei a desenvolver em JavaScript um dos primeiros conflitos que tive c
 
 ## Protótipos
 
-Todo objeto em JavaScript tem um segundo objeto, este segundo objeto é chamado de protótipo, e o primeiro sempre herda as propriedades deste protótipo, todos os objetos criados com a palavra-chave new utiliza a função construtora como protótipo, o código por exemplo abaixo 
+Todo objeto em JavaScript tem um segundo objeto, este segundo objeto é chamado de protótipo, e o primeiro sempre herda as propriedades deste protótipo, todos os objetos criados com a palavra-chave new utiliza a função construtora como protótipo, o código por exemplo abaixo.
 
 ``` javascript criando objeto
 //criando objeto e herdando de Date.prototype
@@ -26,7 +26,7 @@ O objeto data herda as propriedades de Date.prototype e de Object.prototype, ess
 
 ## Criando classes em JavaScript
 
-A maneira como se é criada classes em JavaScript é diferente da maneira como é feita em Java, as classes em JavaScript são baseadas em cima do mecanismo de  protótipos, primeiro é necessário criar uma função que se tem o nome de construtora, através dela  é possível se realiza a herança de propriedades para o objeto que vai herdar, segue o codigo abaixo tanto em JavaScript como em Java para que você possa comparar as diferenças 
+A maneira como se é criada classes em JavaScript é diferente da maneira como é feita em Java, as classes em JavaScript são baseadas em cima do mecanismo de  protótipos, primeiro é necessário criar uma função que se tem o nome de construtora, através dela  é possível se realiza a herança de propriedades para o objeto que vai herdar, segue o codigo abaixo tanto em JavaScript como em Java para que você possa comparar as diferenças.
 
 ``` java classe pessoa
 //classe em Java
@@ -72,10 +72,11 @@ Pessoa.prototype = {
 		console.log(this.nome +' esta andando');
 	}
 }
+```
 
+A maneira como lidamos como instanciamos e utilizamos os métodos em JavaScript são os mesmo de linguagens como Java.
 
-A maneira como lidamos como instanciamos e utilizamos os métodos em JavaScript são os mesmo de linguagens como Java
-
+``` javascript criando objeto
 //criando objeto em JavaScript
 var meuObjeto = new Pessoa('Rodrigo', 30);
 //invocando os metodos
