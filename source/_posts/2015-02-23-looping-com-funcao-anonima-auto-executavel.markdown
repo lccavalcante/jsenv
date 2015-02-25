@@ -1,18 +1,20 @@
 ---
 layout: post
-title: "Looping com função anonima auto-executável"
+title: "Looping com função anônima auto-executável"
 date: 2015-02-23 13:55:09 -0300
 author: Guilherme Moura Nascimento
 comments: true
+image:
+  feature: /post_images/C536C62904.jpg
 categories: javascript
 ---
 
-Javascript em alguns momentos é uma linguagem muito traiçoeira, lhe prega peças que consomem horas de debug e paciência. São os chamados Gotchas, na tradução literal, "pegadinhas". 
+Javascript em alguns momentos é uma linguagem muito traiçoeira, prega peças que consomem horas de debug e paciência. São os chamados [Gotchas](http://en.wikipedia.org/wiki/Gotcha_%28programming%29), na tradução literal, _"pegadinhas"_. 
 
-Coisas que pela logica deveriam funcionar de uma maneira, mais por características de um sistema ou alguma linguagem programação funcionam de maneira inesperada.
+Coisas que pela lógica deveriam funcionar de uma maneira, mais por características de um sistema ou alguma linguagem programação funcionam de maneira inesperada.
 <!-- more -->
 
-Esse post se dedica a tratar de um Gotcha muito comum quando se trata de escopo, que provavelmente você já foi pego por ele, caso não, é hora de explodir sua cabeça.
+Esse post se dedica a tratar de um Gotcha muito comum relacionado a  escopo, que provavelmente você já foi pego por ele, caso não, é hora de explodir sua cabeça.
 
 ``` javascript gotcha http://en.wikipedia.org/wiki/Gotcha_%28programming%29#Gotchas_in_JavaScript_programming_language Gotcha (programming)]
 var func = [];
@@ -27,13 +29,13 @@ func[0]();
 ```
 Ao executar esse trecho de código nos deparamos com o alert sempre com o valor 3.
 
-Oh God, Help me!  
+**Oh God, Help me!**
 
 Take easy boy, vamos entender o que acontece. 
 
-O i dentro closure aponta para i global.  Quando chamamos a função func[0]() o i será 3 por que o valor do i global é 3.
+O `i` dentro closure aponta para `i` global.  Quando chamamos a função `func[0]()` o `i` será 3 por que o valor do `i` global é 3.
 
-Problema semelhante acontece quando colocamos um ajax em um looping, e desejamos usar o índice dentro dos callbacks. O Índice aparece como undefined, veja o exemplo:
+Problema semelhante acontece quando colocamos um ajax em um looping, e desejamos usar o índice dentro de seus callbacks. O índice aparece como `undefined`, veja o exemplo:
 
 
 ``` javascript ajax dentro de looping
@@ -49,16 +51,17 @@ for( var i = 0; i < users.length; i+=1) {
     });
 }
 ```
+Isso acontece porque `i` é global dentro desse escopo, logo o valor dele é 3 e `users[i]` aparece como `undefined` pois a posição 3 não existe.
 
 
-A solução é simples, devemos isolar cada índice, criando um escopo com uma função anonima auto-executável para que o valor do i seja preservador em cada interação. Veja o exemplo:
+A solução é simples, devemos isolar cada índice, criando um escopo com uma função anônima auto-executável para que o valor do `i` seja preservado em cada interação, veja o exemplo:
 
-``` javascript função anonima auto-executável com looping
+``` javascript função anônima auto-executável com looping
 var func = [];
 for( var i = 0; i < 3; i++ ){
     func[i] = (function (index) {
         alert(index)
-    })(i) // Índice do looping sendo passado como parametro
+    })(i) // Índice do looping sendo passado como parâmetro
 }
 ```
 
@@ -66,7 +69,7 @@ for( var i = 0; i < 3; i++ ){
 
 Exemplo usando com ajax:
 
-``` javascript função anonima auto-executável com looping
+``` javascript função anônima auto-executável com looping
 var func = [];
 var users = [1028,885,931];
 for( var i = 0; i < users.length; i+=1)(function (index) {
@@ -78,11 +81,11 @@ $.ajax({
             console.log( response ); // resposta
         }
     });
-})(i)// Índice do looping sendo passado como parametro
+})(i)// Índice do looping sendo passado como parâmetro
 ```
-O Javascript possui varios gotchas. [Jonathan Cardy](http://www.codeproject.com/Articles/182416/A-Collection-of-JavaScript-Gotchas) escreveu um post bem completo. sobre vários gotchas do Javascript, vale uma lida.
+O Javascript possui varios gotchas. [Jonathan Cardy](http://www.codeproject.com/Articles/182416/A-Collection-of-JavaScript-Gotchas) escreveu um post bem completo, sobre vários gotchas do Javascript, vale uma lida.
 
-Já com relação a closures, existe um post [stackoverflow](http://stackoverflow.com/questions/111102/how-do-javascript-closures-work) detalhando a fundo sobre o assunto.
+Já com relação a closures, existe um post no [stackoverflow](http://stackoverflow.com/questions/111102/how-do-javascript-closures-work) detalhando a fundo sobre o assunto.
 
 
 
