@@ -55,13 +55,20 @@
 <meta property="og:url" content="{{ canonical }}">
 <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 <meta property="og:description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
-{% if page.image.feature %}
-  <meta property="og:image" content="{{ page.image.feature }}">
-{% elsif page.image.thumb %}
-  <meta property="og:image" content="{{ page.image.thumb }}">
+
+
+{% if layout == 'post' %}
+  {% if page.image.feature %}
+    <meta property="og:image" content="{{ page.image.feature }}">
+  {% elsif page.image.thumb %}
+    <meta property="og:image" content="{{ page.image.thumb }}">
+  {% else %}
+    <meta property="og:image" content="{{ site.logo }}">
+  {% endif %}
 {% else %}
-  <meta property="og:image" content="{{ site.logo }}">
+  <meta property="og:image" content="{{ site.facebook_share_image }}">
 {% endif %}
+
 <meta property="og:site_name" content="{{ site.title }}">
 
 <link rel="canonical" href="{{ canonical }}">
