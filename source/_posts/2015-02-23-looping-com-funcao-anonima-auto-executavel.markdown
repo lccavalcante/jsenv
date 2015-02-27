@@ -84,7 +84,7 @@ for( var i = 0; i < users.length; i+=1)
         dataType: "json",
         success: (function(index) {
             return function( response ) {
-                console.log(users[index]) //undefined
+                console.log(users[index]) // usuário correto
                 console.log( response ); // resposta
             };
         })(i)// Índice do looping sendo passado como parâmetro
