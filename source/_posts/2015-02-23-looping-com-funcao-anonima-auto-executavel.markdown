@@ -82,7 +82,7 @@ for( var i = 0; i < users.length; i+=1)
     $.ajax({
         url: 'http://echo.jsontest.com/users/'+ users[i] ,
         dataType: "json",
-        success: (function(index) {
+        success: (function(index) { // função anônima auto-executável
             return function( response ) {
                 console.log(users[index]) // usuário correto
                 console.log( response ); // resposta
