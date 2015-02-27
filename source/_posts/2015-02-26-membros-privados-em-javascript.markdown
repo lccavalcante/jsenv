@@ -11,7 +11,7 @@ categories: [javascript, tips]
 
 Quem nunca se perguntou: _"Como faço para deixar minhas variáveis e métodos privados com Javascript?"_. Pois bem, tentarei de uma forma bem pragmática mostrar como fazemos isso.
 
-Algumas pessoas acreditam que o Javascript não tem a propriedade de _"esconder informações"_, porquê `object` não pode ter variáveis e métodos privados. Mas isso não passa de um mal-entendido.
+Algumas pessoas acreditam que o Javascript não tem a capacidade de _"esconder informações"_, porquê `object` não pode ter variáveis e métodos privados. Mas isso não passa de um mal-entendido.
 
 #### _Sim! Objetos Javascript podem ter membros privados._
 
