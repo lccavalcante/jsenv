@@ -31,7 +31,7 @@ Ao executar esse trecho de código nos deparamos com o alert sempre com o valor 
 
 **Oh God, Help me!**
 
-Take easy boy, vamos entender o que acontece. 
+Take it easy boy, vamos entender o que acontece. 
 
 O `i` dentro closure aponta para `i` global.  Quando chamamos a função `func[0]()` o `i` será 3 por que o valor do `i` global é 3.
 
@@ -54,15 +54,21 @@ for( var i = 0; i < users.length; i+=1) {
 Isso acontece porque `i` é global dentro desse escopo, logo o valor dele é 3 e `users[i]` aparece como `undefined` pois a posição 3 não existe.
 
 
-A solução é simples, devemos isolar cada índice, criando um escopo com uma função anônima auto-executável para que o valor do `i` seja preservado em cada interação, veja o exemplo:
+A solução é simples, devemos isolar cada índice, criando um escopo com uma função anônima auto-executável para que o valor do `i` seja preservado em cada iteração, veja o exemplo:
 
 ``` javascript função anônima auto-executável com looping
 var func = [];
 for( var i = 0; i < 3; i++ ){
     func[i] = (function (index) {
-        alert(index)
+        return function() { 
+            alert(index); 
+        };
     })(i) // Índice do looping sendo passado como parâmetro
 }
+
+func[0](); // alert 0
+func[1](); // alert 1
+func[2](); //alert 2
 ```
 
 
@@ -72,20 +78,19 @@ Exemplo usando com ajax:
 ``` javascript função anônima auto-executável com looping
 var func = [];
 var users = [1028,885,931];
-for( var i = 0; i < users.length; i+=1)(function (index) {
-$.ajax({
-        url: 'http://echo.jsontest.com/users/'+ users[index] ,
+for( var i = 0; i < users.length; i+=1)
+    $.ajax({
+        url: 'http://echo.jsontest.com/users/'+ users[i] ,
         dataType: "json",
-        success: function( response ) {
-            console.log(users[index]) //undefined
-            console.log( response ); // resposta
-        }
+        success: (function(index) {
+            return function( response ) {
+                console.log(users[index]) // usuário correto
+                console.log( response ); // resposta
+            };
+        })(i)// Índice do looping sendo passado como parâmetro
     });
-})(i)// Índice do looping sendo passado como parâmetro
 ```
 O Javascript possui vários gotchas. [Jonathan Cardy](http://www.codeproject.com/Articles/182416/A-Collection-of-JavaScript-Gotchas) escreveu um post bem completo, sobre vários gotchas do Javascript, vale uma lida.
 
-Já com relação a closures, existe um post no [stackoverflow](http://stackoverflow.com/questions/111102/how-do-javascript-closures-work) detalhando sobre o assunto.
-
-
+Já com relação a closures, existe um post no [stackoverflow](http://stackoverflow.com/questions/111102/how-do-javascript-closures-work) detalhando sobre o assunto.  
 
