@@ -1,4 +1,4 @@
----
+--
 layout: post
 title: "Membros Privados em Javascript"
 date: 2015-02-26 15:04:53 -0300
@@ -11,7 +11,7 @@ categories: [javascript, tips]
 
 Quem nunca se perguntou: _"Como faço para deixar minhas variáveis e métodos privados com Javascript?"_. Pois bem, tentarei de uma forma bem pragmática mostrar como fazemos isso.
 
-Algumas pessoas acreditam que o Javascript não tem a capacidade de _"esconder informações"_, porquê `object` não pode ter variáveis e métodos privados. Mas isso não passa de um mal-entendido.
+Algumas pessoas acreditam que o Javascript não tem a capacidade de _"esconder informações"_, porque `object` não pode ter variáveis e métodos privados. Mas isso não passa de um mal-entendido.
 
 #### _Sim! Objetos Javascript podem ter membros privados._
 
@@ -27,7 +27,7 @@ Objetos são coleções de pares nome-valor. Os nomes são _strings_ e o valores
 
 ## Membros Públicos
 
-Os membros de um `object` são, sem exceção públicos. Qualquer função pode acessar, modificar, deletar ou até mesmo adicionar novos membros. Existem duas maneiras principais de inserir membros em um novo objeto:
+Os membros de um `object` são, sem exceção, públicos. Qualquer função pode acessar, modificar, deletar ou até mesmo adicionar novos membros. Existem duas maneiras principais de inserir membros em um novo objeto:
 
 ### No construtor
 
@@ -49,7 +49,7 @@ O valor de `novo_objeto.membro` será `a-b-c`.
 
 ### No prototype
 
-Esta técnica é utilizada para adicionar _métodos_ públicos. Quando um mebro é procurado dentro do próprio objeto e não é encontrado, ele é retirado do protótipo do Construtor do objeto. O mecânismo do _prototype_ é usado para herança. O que também conserva a memória. Para adicionar um método para todos os objetos criados a partir do Construtor do prototype:
+Esta técnica é utilizada para adicionar _métodos_ públicos. Quando um membro é procurado dentro do próprio objeto e não é encontrado, ele é retirado do protótipo do Construtor do objeto. O mecânismo do _prototype_ é usado para herança. O que também conserva a memória. Para adicionar um método para todos os objetos criados a partir do protótipo do Construtor:
 
 ``` javascript
 Adicionar.prototype.stamp = function ( string ) {
@@ -127,16 +127,16 @@ function Container ( param ) {
 
 Então temos o método privilegiado `escreve` que acessa os valores definidos dentro do _Construtor_, porém não pode alterá-los. \o/
 
-Isso só é possível porquê existem as _Closures_ no Javascript.
+Isso só é possível porque existem as _Closures_ no Javascript.
 
 ## Closures
 
 Os padrões de membros `public`, `private` e `privileged` só se tornam possíveis pelo fato da linguagem Javascript possuir _Closures_.
 
-Isso quer dizer que uma função interna sempre tem acesso as variáveis e parâmetros da função externa, mesmo depois dela já ter executado.
+Isso quer dizer que uma função interna sempre tem acesso as variáveis e parâmetros da função externa, mesmo depois de ela já ter executado.
 Essa é uma propriedade muito poderosa da linguagem Javascript!
 
-Métodos privados e privilegiados só podem ser atribuidos enquanto o objeto está sendo construído, já os públicos podem ser adicionados a qualquer momento.
+Métodos privados e privilegiados só podem ser atribuídos enquanto o objeto está sendo construído, já os públicos podem ser adicionados a qualquer momento.
 
 ## Padrões utilizando Closures
 
