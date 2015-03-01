@@ -49,7 +49,7 @@ O valor de `novo_objeto.membro` será `a-b-c`.
 
 ### No prototype
 
-Esta técnica é utilizada para adicionar _métodos_ públicos. Quando um membro é procurado dentro do próprio objeto e não é encontrado, ele é retirado do protótipo do Construtor do objeto. O mecânismo do _prototype_ é usado para herança. O que também conserva a memória. Para adicionar um método para todos os objetos criados a partir do protótipo do Construtor:
+Esta técnica é utilizada para adicionar _métodos_ públicos. Quando um membro é procurado dentro do próprio objeto e não é encontrado, ele é retirado do protótipo do Construtor do objeto. O mecânismo do _prototype_ é usado para herança. O que também conserva a memória. Para adicionar um método para todos os objetos criados a partir do Construtor, adicione uma função ao protótipo do Construtor:
 
 ``` javascript
 Adicionar.prototype.stamp = function ( string ) {
