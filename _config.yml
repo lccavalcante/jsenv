@@ -2,7 +2,7 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://www.jsenv.com 
+url: http://www.jsenv.com/
 title: JS env - Ambiente dedicado a assuntos sobre Javascript 
 subtitle: Meetups, artigos, dicas, discussões e undefined
 author: JS env team
@@ -20,7 +20,7 @@ date_format: "ordinal"
 subscribe_rss: /atom.xml
 subscribe_email:
 # RSS feeds can list your email address if you like
-email:
+email: team.jsenv@gmail.com
 
 # ----------------------- #
 #    Jekyll & Plugins     #
@@ -71,7 +71,7 @@ github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
+twitter_user: jsenv
 twitter_tweet_button: true
 
 # Google +1
