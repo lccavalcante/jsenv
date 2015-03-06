@@ -4,6 +4,7 @@ title: "Classes em Javascript"
 date: 2015-02-24 00:01:27 -0300
 author: Rodrigo Fernandes
 comments: true
+share: true
 categories: [javascript, prototipos] 
 image:
   feature: http://www.jsenv.com/post_images/0A7ED815C4.jpg

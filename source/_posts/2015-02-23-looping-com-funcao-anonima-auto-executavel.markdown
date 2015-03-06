@@ -4,6 +4,7 @@ title: "Looping com função anônima auto-executável"
 date: 2015-02-23 13:55:09 -0300
 author: Guilherme Moura Nascimento
 comments: true
+share: true
 image:
   feature: http://www.jsenv.com/post_images/C536C62904.jpg
 categories: javascript

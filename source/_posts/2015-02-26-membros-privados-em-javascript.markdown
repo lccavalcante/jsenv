@@ -3,6 +3,7 @@ layout: post
 title: "Membros Privados em Javascript"
 date: 2015-02-26 15:04:53 -0300
 comments: true
+share: true
 author: Leandro Cavalcante
 image:
   feature: http://www.jsenv.com/post_images/47DF5E7897.jpg

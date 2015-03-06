@@ -3,6 +3,7 @@ layout: post
 author: Leandro Cavalcante
 title: "Web Messaging - API HTML 5"
 date: 2015-02-20 17:24:45 -0200
+share: true
 comments: true
 image:
   feature: http://www.jsenv.com/post_images/A69C1ECBE1.jpg
