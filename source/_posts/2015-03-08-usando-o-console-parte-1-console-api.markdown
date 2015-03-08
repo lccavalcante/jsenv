@@ -6,7 +6,8 @@ date: 2015-03-08 03:41:33 +0000
 share: true
 comments: true
 image:
-  feature: http://jsenv.com/post_images/72AF51EA3B.jpg
+  feature: /post_images/72AF51EA3B.jpg
+  content: "/post_images_content/usando_o_console_parte_um"
 categories: [javascript, debug, console] 
 ---
 
@@ -24,7 +25,7 @@ Lembrando que os exemplos desse post foram feitos no **Google Chrome,** porém s
 
 Para ter acesso ao Console use as teclas de atalho **Ctrl + Shift + j** no Windows/Linux ou **Command + Option + j** para Mac.
 
-![alt text]( path da imagem "alt da imagem")
+![Console]({{ page.image.content }}/console.jpg)
 
 ### Logando mensagens 
 
@@ -32,60 +33,141 @@ Para ter acesso ao Console use as teclas de atalho **Ctrl + Shift + j** no Windo
 
 Provavelmente o método mais utilizado da API, com ele podemos exibir mensagens no console.
 
-![alt text]( path da imagem "alt da imagem")
+``` javascript
+var a = 10, b = 20;
+
+console.log(a)
+console.log(b)
+```
+
+![Logando mensagens]({{ page.image.content }}/logando-mensagem.jpg)
 
 Podemos usar coringas para concatenar com variáveis de forma elegante:
 
 | Coringa       | Tipo          |
 | ------------- |:-------------:|
-| %s            | string        |
-| %d ou %i      | integer       |
-| %f            | float         |
-| %o            | DOM Elements  |
-| %O            | Javascript object|
-| %c            | CSS style     |
+| **%s**            | string        |
+| **%d ou %i**      | integer       |
+| **%f**            | float         |
+| **%o**            | DOM Elements  |
+| **%O**            | Javascript object|
+| **%c**            | CSS style     |
 
 **Concatenando com variáveis:**
 
-![alt text]( path da imagem "alt da imagem")
+``` javascript
+var a = 10, b = 20;
+
+console.log("valor de a: %i e valor de b: %i", a, b)
+```
+
+![Concatenando]({{ page.image.content }}/logando-concat-string.jpg)
+
+**Concatenando com objetos:**
+
+``` javascript
+var nome  = { nome: "Geremias", cidade:"Jaraitinga" }
+var curso = { nome: "Administração", turma: "A" }
+
+console.log("Nome: %O e curso: %O", nome, curso)
+```
+
+![Logando objetos]({{ page.image.content }}/logando-objetos.jpg)
 
 **Estilizando as mensagens:**
 
-![alt text]( path da imagem "alt da imagem")
+``` javascript
+console.log("%cHello %cworld","color:red;font-size:x-large","color:blue")
+```
+
+![Logando com estilo]({{ page.image.content }}/logando-estilizado.jpg)
 
 #### Exibir mensagens de alerta - *console.warn(object [, object, ...])*
 
-![alt text]( path da imagem "alt da imagem")
+``` javascript
+console.warn("E-mail inválido")
+```
 
-#### Agrupando logs - *console.group(object [, object, ...])* ,* console.groupEnd()*
+![Logando mensagem de warn]({{ page.image.content }}/logando-warn.jpg)
 
-![alt text]( path da imagem "alt da imagem")
+#### Agrupando logs - *console.group(object [, object, ...])*, *console.groupEnd()*
+
+``` javascript
+console.group("Logs de Usuários")
+console.log("Usuário logado")
+console.log("Usuário efetuo a compra com sucesso")
+console.groupEnd();
+
+console.group("Carrinho de compras")
+console.log("Carrinho vazio")
+console.log("Novo item adicionado ao carrinho")
+console.groupEnd()
+```
+
+![Agrupando]({{ page.image.content }}/logando-group.jpg)
 
 #### Agrupando com  groupCollapsed -  *console.groupCollapsed(object [, object, ...])*
 
-![alt text]( path da imagem "alt da imagem")
+``` javascript
+console.groupCollapsed("Logs de Usuários")
+console.log("Usuário logado")
+console.log("Usuário efetuo a compra com sucesso")
+console.groupEnd()
+
+console.groupCollapsed("Carrinho de compras")
+console.log("Carrinho vazio")
+console.log("Novo item adicionado ao carrinho")
+console.groupEnd()
+```
+
+![Agrupando com collapsed]({{ page.image.content }}/log-group-groupCollapsed.gif)
 
 ### Testes
 
-É possível usar o **Console** para efetuar alguns teste simples, como teste de asserção, tempo de execução de trechos de código e track de eventos.
+É possível usar o **Console** para efetuar alguns teste simples, como teste de asserção, tempo de execução e tracking.
 
 #### Testando uma condição - *console.assert(expression, object)*
 
 Você pode usar o método `assert` para testar uma condição, caso ele seja falsa, será exibida a mensagem.
 
-![alt text]( path da imagem "alt da imagem")
+``` javascript
+var a = 10, b = 20;
+
+console.assert( a > b, "A não é maior que B")
+```
+
+![Testes com assert]({{ page.image.content }}/logando-assert.jpg)
 
 #### Contador - *console.count(label)*
 
 Exibe a quantidade de vezes que a mesma `label` foi invocada.
 
-![alt text]( path da imagem "alt da imagem")
+``` javascript
+function validaCampo (campo) {
+ console.count('Validando campo ' + campo);
+}
+
+validaCampo('phone')
+validaCampo('email')
+```
+
+![Count]({{ page.image.content }}/log-group-count.gif)
 
 #### Calculando o tempo - *console.time(label) e console.timeEnd(label)*
 
+``` javascript
+var users = new Array(10000);
+console.time('Tempo para contabilitar os usuários')
+
+for(var i = 0; i < users.length; i+=1) {
+ users[i] = new Object()
+}
+console.timeEnd("Tempo para contabilitar os usuários")
+```
+
 Contabilizando o tempo de execução de trechos de códigos, onde cada label está relacionada a um timer.
 
-![alt text]( path da imagem "alt da imagem")
+![Count]({{ page.image.content }}/logando-timer.jpg)
 
 Console API possui vários métodos, tire um tempinho para ler a [documentação completa](https://developer.chrome.com/devtools/docs/console-api).
 
