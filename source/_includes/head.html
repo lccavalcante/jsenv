@@ -57,13 +57,11 @@
 <meta property="og:description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
 
 
-{% if layout == 'post' %}
+{% if page.image %}
   {% if page.image.feature %}
     <meta property="og:image" content="{{ page.image.feature }}">
-  {% elsif page.image.thumb %}
+  {% else page.image.thumb %}
     <meta property="og:image" content="{{ page.image.thumb }}">
-  {% else %}
-    <meta property="og:image" content="{{ site.logo }}">
   {% endif %}
 {% else %}
   <meta property="og:image" content="{{ site.facebook_share_image }}">
