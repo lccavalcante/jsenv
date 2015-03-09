@@ -6,7 +6,7 @@ author: Leandro Cavalcante
 comments: true
 share: true
 image:
-  feature: http://www.jsenv.com/post_images/OAIDO9GSRD.jpg
+  feature: http://jsenv.com/post_images/OAIDO9GSRD.jpg
 categories: git
 ---
 

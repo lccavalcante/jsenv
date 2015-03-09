@@ -6,7 +6,7 @@ author: Guilherme Moura Nascimento
 comments: true
 share: true
 image:
-  feature: http://www.jsenv.com/post_images/C536C62904.jpg
+  feature: http://jsenv.com/post_images/C536C62904.jpg
 categories: javascript
 ---
 
