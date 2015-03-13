@@ -11,17 +11,18 @@ image:
 categories: [javascript, debug, console] 
 ---
 
-[Console](https://developer.chrome.com/devtools/docs/console) é uma ferramenta sagrada para Front-enders, usada para debugar, procurar por erros, gerar logs, fazer testes de performance, teste de asserção, entre outras coisas que nos ajudam fazer analises a aplicação do lado do cliente.
+[Console](https://developer.chrome.com/devtools/docs/console) é uma ferramenta sagrada para Front-enders, usada para debugar, procurar por erros, gerar logs, fazer testes de performance, teste de asserção, entre outras coisas que nos ajudam a fazer análises a aplicação do lado do cliente.
 
-Esse poste tem o objetivo de mostrar algumas dicas que vão facilitar suas analises e debug da aplicação especificamente para o **Google Chrome.**
+Esse poste tem o objetivo de mostrar algumas dicas que vão facilitar suas análises e debug da aplicação especificamente para o **Google Chrome.**
+<!--more-->
 
-O Chrome possui uma ferramenta muito poderosa chamada [Console](https://developer.chrome.com/devtools/docs/console), tal é composta por duas APIs, [Console API](https://developer.chrome.com/devtools/docs/console) que será abordada nesse poste e [Comman Line API](https://developer.chrome.com/devtools/docs/commandline-api) que será aborda na parte dois do post.
+O Chrome possui uma ferramenta muito poderosa chamada [Console](https://developer.chrome.com/devtools/docs/console), tal é composta por duas APIs, [Console API](https://developer.chrome.com/devtools/docs/console) que será abordada neste poste e [Comman Line API](https://developer.chrome.com/devtools/docs/commandline-api) que será abordada na parte dois do post.
 
-Lembrando que os exemplos desse post foram feitos no **Google Chrome,** porém são similares em outros browsers(Safari, Firefox e Opera).
+Lembrando que os exemplos deste post foram feitos no **Google Chrome,** porém são similares em outros browsers (Safari, Firefox e Opera).
 
 **Let's Rock**
 
-## Abrindo Console
+## Abrindo o Console
 
 Para ter acesso ao Console use as teclas de atalho **Ctrl + Shift + j** no Windows/Linux ou **Command + Option + j** para Mac.
 
@@ -31,7 +32,7 @@ Para ter acesso ao Console use as teclas de atalho **Ctrl + Shift + j** no Windo
 
 #### Exibir mensagem - *console.log(object [, object, ...])*
 
-Provavelmente o método mais utilizado da API, com ele podemos exibir mensagens no console.
+Provavelmente é o método mais utilizado da API, com ele podemos exibir mensagens no console.
 
 ``` javascript
 var a = 10, b = 20;
@@ -42,9 +43,9 @@ console.log(b)
 
 ![Logando mensagens]({{ page.image.content }}/logando-mensagem.jpg)
 
-Podemos usar coringas para concatenar com variáveis de forma elegante:
+Podemos usar curingas para concatenar com variáveis de forma elegante:
 
-| Coringa       | Tipo          |
+| Curinga       | Tipo          |
 | ------------- |:-------------:|
 | **%s**            | string        |
 | **%d ou %i**      | integer       |
@@ -124,11 +125,11 @@ console.groupEnd()
 
 ### Testes
 
-É possível usar o **Console** para efetuar alguns teste simples, como teste de asserção, tempo de execução e tracking.
+É possível usar o **Console** para efetuar alguns testes simples, como teste de asserção, tempo de execução e tracking.
 
 #### Testando uma condição - *console.assert(expression, object)*
 
-Você pode usar o método `assert` para testar uma condição, caso ele seja falsa, será exibida a mensagem.
+Você pode usar o método `assert` para testar uma condição, caso ela seja falsa, será exibida a mensagem.
 
 ``` javascript
 var a = 10, b = 20;
@@ -171,7 +172,7 @@ Contabilizando o tempo de execução de trechos de códigos, onde cada label est
 
 Console API possui vários métodos, tire um tempinho para ler a [documentação completa](https://developer.chrome.com/devtools/docs/console-api).
 
-Safari, Firefox, Opera e Internet Explorer também possuem seus próprios Console, seguei o link da documentação de cada um:
+Safari, Firefox, Opera e Internet Explorer também possuem seu próprio Console, segue o link da documentação de cada um:
 
 **Firefox**: [http://goo.gl/E3o0kK](http://goo.gl/E3o0kK) <br/>
 **Safari**: [http://goo.gl/07sSft](http://goo.gl/07sSft) <br/>
