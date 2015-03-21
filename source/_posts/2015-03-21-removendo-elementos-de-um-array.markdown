@@ -97,4 +97,4 @@ var elementos 					= [10, 20, 30, 40, 50],
 
 Existem `n` maneiras de se escrever o código acima, fique à vontade para utiliza-lo dentro do seu contexto de desenvolvimento.
 
-Dúvidas ou sugestões, só deixar um comentário que responderemos o mais breve possível.
+Dúvidas ou sugestões, basta deixar um comentário que responderemos o mais breve possível.
