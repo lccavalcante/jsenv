@@ -2,8 +2,8 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://www.jsenv.com/
-title: JS env - Ambiente dedicado a assuntos sobre Javascript 
+url: http://jsenv.com
+title: JS env - Ambiente dedicado a assuntos sobre Javascript
 subtitle: Meetups, artigos, dicas, discussões e undefined
 author: JS env team
 simple_search: https://www.google.com/search
@@ -100,3 +100,4 @@ google_analytics_tracking_id: UA-59955359-1
 
 # Facebook Like
 facebook_like: true
+facebook_page: jsenvbr

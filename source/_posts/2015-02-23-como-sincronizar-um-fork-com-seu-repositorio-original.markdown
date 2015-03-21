@@ -4,8 +4,9 @@ title: "Como sincronizar um fork com seu repositório original"
 date: 2015-02-23 15:06:17 -0300
 author: Leandro Cavalcante
 comments: true
+share: true
 image:
-  feature: http://www.jsenv.com/post_images/OAIDO9GSRD.jpg
+  feature: http://jsenv.com/post_images/OAIDO9GSRD.jpg
 categories: git
 ---
 
