@@ -15,6 +15,8 @@ Quem nunca precisou remover um elemento específico dentro de um array e deu aqu
 ## Método $.inArray da jQuery
 Geralmente esta seria uma das alternativas para acharmos um algoritmo que facilitasse a solução do nosso problema, mas já pararam para pensar ou pesquisar o que exatamente o `$.inArray` faz ou como funciona?
 
+<!--more-->
+
 Basicamente o método `$.inArray` percorre um determinado array e retorna a posição do elemento desejado. Hmmm, isso já ajudaria bastante. Certo?
 
 Porém, concorda que carregar a biblioteca da `jQuery` só para resolvermos isso seria desnecessário? Então vamos melhorar isso!
@@ -28,7 +30,7 @@ function inArray ( elem, array, index ) {
 }
 ``` 
 
-Porém, o `indexOf` foi adicionado como padrão no ECMA-262 em sua 5ª edição, com isso alguns navegadores podem não dar suporte, por exemplo o IE8.
+Porém, o `indexOf` foi adicionado como padrão no ECMA-262 em sua 5ª edição, com isso alguns navegadores antigos não suportam essa funcionalidade, por exemplo o IE8.
 
 Então antes de escrevermos nosso método, criaremos um _Helper_ para garantirmos que esse suporte seja universal.
 
@@ -105,12 +107,12 @@ if (!Array.prototype.indexOf) {
 Agora que podemos garantir que tudo funcione corretamente em todos os navegadores, prosseguiremos com nossa solução escrevendo nosso método para retornar a posição do elemento que desejamos remover:
 
 ``` javascript Método de sugestão
-function inArray ( elem, array ) {
-	return array == null ? -1 : array.indexOf( elem );
+function posicaoNoArray ( elemento, array ) {
+	return array == null ? -1 : array.indexOf( elemento );
 }
 ``` 
 
-Agora que temos nossa função para encontrar a posição do elemento dentro do Array, vamos resolver nosso problema.
+Agora que temos nossa função para encontrar a posição do elemento dentro do _Array_, vamos resolver nosso problema.
 
 Dado um array:
 
@@ -126,7 +128,7 @@ var elementos 					= [10, 20, 30, 40, 50],
 	elemento_removido,
 	posicao_elemento_remover;
 
-	posicao_elemento_remover = inArray( elemento_remover, elementos );
+	posicao_elemento_remover = posicaoNoArray( elemento_remover, elementos );
 ```
 
 Nossa variável `posicao_elemento_remover` será igual a `2` lembrando que o índice do array inicia-se em `0`.
@@ -167,7 +169,7 @@ var elementos 					= [10, 20, 30, 40, 50],
 ```
 
 ## Conclusão
-É muito importante utilizar como base métodos e soluções adotadas por bibliotecas já consagradas e vastamente utilizadas. Assim, além de melhorarmos a escrita de nossos códigos, conseguimos chegar a algoritmos mais enxutos.
+É muito importante utilizar como base de desenvolvimento, métodos e soluções nativas já consagradas e vastamente utilizadas. Assim, além de melhorarmos a escrita de nossos códigos, conseguimos chegar a algoritmos mais enxutos.
 
 Existem `n` maneiras de se escrever o código acima, fique à vontade para utiliza-lo dentro do seu contexto de desenvolvimento.
 
