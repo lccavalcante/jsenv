@@ -28,7 +28,7 @@ function inArray ( elem, array, index ) {
 }
 ``` 
 
-Porém, o `indexOf` foi adicionado como padrão no ECMA-262 em sua 5ª edição, com isso alguns navegadoes podem não dar suporte, por exemplo o IE8.
+Porém, o `indexOf` foi adicionado como padrão no ECMA-262 em sua 5ª edição, com isso alguns navegadores podem não dar suporte, por exemplo o IE8.
 
 Então antes de escrevermos nosso método, criaremos um _Helper_ para garantirmos que esse suporte seja universal.
 
