@@ -6,7 +6,7 @@ author: Leandro Cavalcante
 share: true
 comments: true
 image:
-  feature: http://www.jsenv.com/post_images/C536C62904.jpg
+  feature: http://www.jsenv.com/post_images/38H.jpg
 categories: [tips, javascript] 
 ---
 
@@ -21,9 +21,16 @@ Porém, concorda que carregar a biblioteca da `jQuery` só para resolvermos isso
 
 ## Por trás do método $.inArray
 Ele é semelhante ao `indexOf` nativo do Javascript e dentro da documentação da jQuery temos acesso a como o método foi escrito e podemos usar como referência.
+
+```javascript Método descrito pela biblioteca jQuery
+function inArray ( elem, array, index ) {
+  return array == null ? -1 : indexOf.call( array, elem, index);
+}
+``` 
+
 Porém, o `indexOf` foi adicionado como padrão no ECMA-262 em sua 5ª edição, com isso alguns navegadoes podem não dar suporte, por exemplo o IE8.
 
-Então antes de escrevermos nosso método, criaremos um Helper para garantirmos que esse suporte seja universal.
+Então antes de escrevermos nosso método, criaremos um _Helper_ para garantirmos que esse suporte seja universal.
 
 Primeiro verificamos se o suporte ao `indexOf` existe, caso contrário seguiremos a [recomendação de compatibilidade da MDC](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) descrita abaixo:
 
@@ -96,13 +103,6 @@ if (!Array.prototype.indexOf) {
 ```
 
 Agora que podemos garantir que tudo funcione corretamente em todos os navegadores, prosseguiremos com nossa solução escrevendo nosso método para retornar a posição do elemento que desejamos remover:
-
-```javascript Método descrito pela biblioteca jQuery
-function inArray ( elem, array, index ) {
-	return array == null ? -1 : indexOf.call( array, elem, index);
-}
-``` 
-ou então
 
 ``` javascript Método de sugestão
 function inArray ( elem, array ) {
